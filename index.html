@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='myMod' lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Antic+Didone" rel="stylesheet">
+    <title>Randomness</title>
+  </head>
+  <body>
+
+
+    <nav class='navBar'>
+      <a href="#!/home">Home</a>
+      <span> | </span>
+      <a href="#!/input">randomNessGenerator</a>
+      <span> | </span>
+      <a href="#!/output">seeRandomResults</a>
+    </nav>
+
+    <ng-view></ng-view>
+
+
+  <script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.6.4/angular-route.js"></script>
+  <script src="app/module.js"></script>
+  <script src="app/config.js"></script>
+  <script src="controllers/homeController.js"></script>
+  <script src="controllers/inputController.js"></script>
+  <script src="controllers/outputController.js"></script>
+  <script src="services/services.js"></script>
+  </body>
+</html>

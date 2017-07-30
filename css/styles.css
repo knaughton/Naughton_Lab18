@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+nav {
+  position: relative;
+  z-index: 9999;
+  padding: 20px 0 6px 20px;
+  background: rgb(30,87,153); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 47%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 47%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 47%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+a {
+  display: inline-block;
+  padding: 0.4em;
+  margin: 6px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+a:link, a:active, a:visited {
+  color: white;
+}
+
+a:hover {
+  color: white;
+background-color: #1c3463;
+}
+
+h2 {
+  padding: 20px;
+}
+
+h1, h3, #tagline {
+  font-family: 'Antic Didone', serif;
+}
+h3 {
+  display: inline-block;
+  background-color: #556;
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: white;
+}
+
+form {
+  margin: 75px auto;
+  padding: 30px;
+  width: 32%;
+  background: rgb(245,246,246); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(245,246,246,1) 0%, rgba(219,220,226,1) 21%, rgba(184,186,198,1) 49%, rgba(221,223,227,1) 80%, rgba(245,246,246,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+}
+
+form p {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+input {
+  width: 98%;
+  margin: 8px 0;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+button {
+  display: block;;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 8px;
+  font-family: 'Advent Pro', sans-serif;
+  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 47%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 47%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 47%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  width: 90%;
+}
+
+ng-view {
+  display: flex;
+  justify-content: space-around;;
+  flex-flow: row wrap;
+}
+
+random-container {
+  width: 40%;
+}
+
+#home-body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -100;
+  background-image: url('/images/seats.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+div #welcome {
+  padding: 50px;
+  border-radius: 6px;
+  text-shadow: 0 1px 0 #263;
+  text-align: center;
+  background-color: rgba(232,232,232);
+  color: white;
+  border: 1px solid white;
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 1s; /* Firefox < 16 */
+      -ms-animation: fadein 1s; /* Internet Explorer */
+       -o-animation: fadein 1s; /* Opera < 12.1 */
+          animation: fadein 1s;
+}
+
+div #home-body p {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.random-container {
+  width: 40%;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  margin-top: 50px auto;
+}
+
+.random-container.ng-enter {
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.random-container.ng-enter.ng-enter-active, .random-container.ng-move.ng-move-active {
+  opacity: 1;
+}
+
+.random-container.ng-leave {
+  animation: 0.5s my_animation;
+}
+
+@keyframes my_animation {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.text {
+  font-size: 1.5em;
+}
